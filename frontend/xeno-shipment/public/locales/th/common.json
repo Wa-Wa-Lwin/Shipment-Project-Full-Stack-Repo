@@ -1,0 +1,35 @@
+{
+  "app": {
+    "name": "Xeno Shipment",
+    "description": "ระบบจัดการการจัดส่ง"
+  },
+  "navigation": {
+    "home": "หน้าแรก",
+    "shipments": "การจัดส่ง",
+    "dashboard": "แดชบอร์ด",
+    "reports": "รายงาน",
+    "settings": "การตั้งค่า",
+    "logout": "ออกจากระบบ"
+  },
+  "common": {
+    "loading": "กำลังโหลด...",
+    "error": "ข้อผิดพลาด",
+    "success": "สำเร็จ",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "edit": "แก้ไข",
+    "delete": "ลบ",
+    "search": "ค้นหา",
+    "filter": "กรอง",
+    "export": "ส่งออก",
+    "import": "นำเข้า"
+  },
+  "auth": {
+    "login": "เข้าสู่ระบบ",
+    "logout": "ออกจากระบบ",
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "forgotPassword": "ลืมรหัสผ่าน?",
+    "rememberMe": "จดจำการเข้าสู่ระบบ"
+  }
+}

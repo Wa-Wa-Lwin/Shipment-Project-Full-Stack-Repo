@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run lint:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm install:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(dir \"C:\\Code\\xeno-shipment\\src\\pages\\shipment\\components\\shipment-details\")",
+      "Bash(findstr:*)",
+      "Bash(test:*)",
+      "Bash(git checkout:*)",
+      "Bash(git restore:*)",
+      "Bash(dir \"C:\\Code\\xeno-shipment\\src\\pages\\shipment\\components\\form-sections\")",
+      "Bash(C:Codexeno-shipmenttemp_rates_section.txt)",
+      "Bash(timeout /t 3)",
+      "Bash(timeout:*)",
+      "Bash(nul)",
+      "Bash(Remove-Item -LiteralPath \"\\?\\C:\\Code\\xeno-shipment\\nul\" -Force)",
+      "Bash(powershell.exe -Command \"Remove-Item -LiteralPath ''\\?\\C:\\Code\\xeno-shipment\\nul'' -Force\")",
+      "Bash(git clean:*)",
+      "Bash(cmd.exe /c \"del /F /Q \\\\.\\C:\\Code\\xeno-shipment\\nul\")",
+      "Bash(rm:*)",
+      "Bash(cat:*)",
+      "Bash(getent hosts:*)",
+      "Bash(sudo nginx:*)",
+      "Bash(sudo systemctl reload:*)",
+      "Bash(netstat:*)",
+      "Bash(tasklist:*)",
+      "Bash(dir:*)",
+      "Bash(sudo systemctl status:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

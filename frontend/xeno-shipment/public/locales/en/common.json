@@ -1,0 +1,35 @@
+{
+  "app": {
+    "name": "Xeno Shipment",
+    "description": "Shipment Management System"
+  },
+  "navigation": {
+    "home": "Home",
+    "shipments": "Shipments",
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me"
+  }
+}

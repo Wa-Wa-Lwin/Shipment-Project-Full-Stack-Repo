@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Inter";
+	src: url("./styles/fonts/Inter/Inter-VariableFont_slnt,wght.ttf")
+		format("truetype");
+	font-weight: 100 900; /* variable font supports full weight range */
+	font-style: normal;
+	font-display: swap; /* good for performance */
+}
+
+body {
+	font-family: "Inter", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	overflow: hidden;
+}

@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./src", // Specify base directory
+    "paths": {
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@config/*": ["config/*"],
+      "@components/*": ["components/*"],
+      "@constants/*": ["constants/*"],
+      "@context/*": ["context/*"],
+      "@features/*": ["features/*"],
+      "@common-features/*": ["common-features/*"],
+      "@ems-features/*": ["ems-features/*"],
+      "@nms-features/*": ["nms-features/*"],
+      "@customer-portal-features/*": ["customer-portal-features/*"],
+      "@maintenance-features/*": ["maintenance-features/*"],
+      "@nms-shared-ui/*": ["nms-shared-ui/*"],
+      "@hook/*": ["hook/*"],
+      "@pages/*": ["pages/*"],
+      "@redux/*": ["redux/*"],
+      "@routers/*": ["routers/*"],
+      "@services/*": ["services/*"],
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@locales/*": ["locales/*"],
+      "@mocks/*": ["mocks/*"],
+      "@/*": ["/*"]
+    }
+  },
+  "include": ["src"]
+}
