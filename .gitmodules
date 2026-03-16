@@ -1,0 +1,6 @@
+[submodule "backend/xen-erp-backend"]
+	path = backend/xen-erp-backend
+	url = https://github.com/Wa-Wa-Lwin/xen-erp-backend
+[submodule "frontend/xeno-shipment"]
+	path = frontend/xeno-shipment
+	url = https://github.com/Wa-Wa-Lwin/xeno-shipment
