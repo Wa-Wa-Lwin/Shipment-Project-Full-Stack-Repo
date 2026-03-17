@@ -20,8 +20,8 @@ export default function Component() {
     event.preventDefault();
     setError(null);
 
-    // Validate Microsoft email domain
-    if (!email.endsWith("@xenoptics.com")) {
+    // Allow demo user to bypass domain restriction
+    if (email !== "admin" && !email.endsWith("@xenoptics.com")) {
       setError("Only @xenoptics.com emails are allowed.");
       return;
     }
@@ -75,6 +75,13 @@ export default function Component() {
             <p className="text-gray-600">Sign in to your account to continue</p>
           </div>
 
+          {/* Demo credentials notice */}
+          <div className="w-full mb-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-800">
+            <p className="font-semibold mb-1">Demo Access</p>
+            <p>Email / Username: <span className="font-mono font-bold">admin</span></p>
+            <p>Password: <span className="font-mono font-bold">12345</span></p>
+          </div>
+
           <Form className="flex flex-col gap-3" validationBehavior="native" onSubmit={handleSubmit}>
             <Input
               onChange={(e) => setEmail(e.target.value)}
@@ -82,7 +89,7 @@ export default function Component() {
               label="Email or Username"
               name="email"
               placeholder="Enter your email or username"
-              type="email"
+              type="text"
               variant="bordered"
             />
             <Input

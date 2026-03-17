@@ -10,13 +10,23 @@ class MicrosoftAuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|string|min:6',
+            'email' => 'required|string',
+            'password' => 'required|string',
         ]);
 
+        // Demo user bypass — no Azure AD call required
+        if ($request->email === 'admin' && $request->password === '12345') {
+            return response()->json([
+                'id'           => 'demo-user-001',
+                'name'         => 'Demo Admin',
+                'email'        => 'admin',
+                'access_token' => 'demo-access-token',
+            ]);
+        }
+
         // Domain restriction
-        $domain = explode('@', $request->email)[1];
-        if ($domain !== env('ALLOWED_DOMAIN')) {
+        $emailParts = explode('@', $request->email);
+        if (count($emailParts) < 2 || $emailParts[1] !== env('ALLOWED_DOMAIN')) {
             return response()->json(['error' => 'Invalid email domain'], 403);
         }
 
