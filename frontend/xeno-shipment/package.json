@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@azure/msal-browser": "^4.22.0",
     "@heroicons/react": "^2.2.0",
     "@heroui/button": "^2.2.10",
     "@heroui/listbox": "^2.3.10",
