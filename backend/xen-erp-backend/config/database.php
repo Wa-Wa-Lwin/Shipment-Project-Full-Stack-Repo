@@ -79,7 +79,7 @@ return [
             'prefix_indexes' => true,
             'options' => [
                 \PDO::ATTR_TIMEOUT => 30, // 30 seconds timeout
-                \PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 30, // SQL Server specific timeout
+                ...(defined('PDO::SQLSRV_ATTR_QUERY_TIMEOUT') ? [\PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 30] : []),
             ],
         ],
     ],
