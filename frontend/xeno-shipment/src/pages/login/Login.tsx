@@ -6,7 +6,6 @@ import { Button, Input, Form } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import MicrosoftLogin from "./components/MicrosoftLogin";
 import { useAuth } from "@context/AuthContext";
 import { preloadParcelItemsCache } from "@hooks/useParcelItemsCache";
 
@@ -68,86 +67,53 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-        <div className="grid lg:grid-cols-2">
-
-          {/* Left Panel - Branding */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-12 lg:p-16 flex flex-col justify-center items-center text-white relative overflow-hidden">
-
-            {/* Brand Logo */}
-            <div className="text-center mb-12 relative z-10">
-              <img src="./images/xenoptics_original_logo_white.png" alt="Xen Logistic Logo" className="mx-auto mt-4 mb-4 w-72 h-auto" />
-              {/* <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                XEN<span className="text-blue-400">OPTICS</span>
-              </h1> */}
-              <p className="text-xl text-gray-300 font-light">
-                Logistics Shipments
-              </p>
-              <div className="w-24 h-1 bg-white mx-auto mt-4 rounded-full"></div>
-            </div>
+      <div className="p-8 lg:p-12 flex flex-col justify-center">
+        <div className="max-w-md mx-auto w-full bg-white rounded-lg shadow-lg p-6 lg:p-8 flex flex-col items-center justify-center">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome</h2>
+            <p className="text-gray-600">Sign in to your account to continue</p>
           </div>
-          <div className="p-8 lg:p-12 flex flex-col justify-center">
-            <div className="max-w-md mx-auto w-full">
-              {/* Header */}
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back</h2>
-                <p className="text-gray-600">Sign in to your account to continue</p>
-              </div>
 
-              <Form className="flex flex-col gap-3" validationBehavior="native" onSubmit={handleSubmit}>
-                <Input
-                  onChange={(e) => setEmail(e.target.value)}
-                  isRequired
-                  label="Xenoptics Email"
-                  name="email"
-                  placeholder="Enter your xenotpics email"
-                  type="email"
-                  variant="bordered"
-                />
-                <Input
-                  onChange={(e) => setPassword(e.target.value)}
-                  isRequired
-                  endContent={
-                    <button type="button" onClick={toggleVisibility}>
-                      {isVisible ? (
-                        <Icon
-                          className="text-default-400 pointer-events-none text-2xl"
-                          icon="solar:eye-closed-linear"
-                        />
-                      ) : (
-                        <Icon
-                          className="text-default-400 pointer-events-none text-2xl"
-                          icon="solar:eye-bold"
-                        />
-                      )}
-                    </button>
-                  }
-                  label="Password"
-                  name="password"
-                  placeholder="Enter your password"
-                  type={isVisible ? "text" : "password"}
-                  variant="bordered"
-                />
-                {error && <p className="text-red-500">{error}</p>}
-                <Button className="w-full" color="primary" type="submit">
-                  {loading ? "Logging in..." : "Log In"}
-                </Button>
-              </Form>
-              {/* Divider & Microsoft Login */}
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-white text-gray-500">
-                    or continue with
-                  </span>
-                </div>
-              </div>
-              <MicrosoftLogin />
-
-            </div>
-          </div>
+          <Form className="flex flex-col gap-3" validationBehavior="native" onSubmit={handleSubmit}>
+            <Input
+              onChange={(e) => setEmail(e.target.value)}
+              isRequired
+              label="Email or Username"
+              name="email"
+              placeholder="Enter your email or username"
+              type="email"
+              variant="bordered"
+            />
+            <Input
+              onChange={(e) => setPassword(e.target.value)}
+              isRequired
+              endContent={
+                <button type="button" onClick={toggleVisibility}>
+                  {isVisible ? (
+                    <Icon
+                      className="text-default-400 pointer-events-none text-2xl"
+                      icon="solar:eye-closed-linear"
+                    />
+                  ) : (
+                    <Icon
+                      className="text-default-400 pointer-events-none text-2xl"
+                      icon="solar:eye-bold"
+                    />
+                  )}
+                </button>
+              }
+              label="Password"
+              name="password"
+              placeholder="Enter your password"
+              type={isVisible ? "text" : "password"}
+              variant="bordered"
+            />
+            {error && <p className="text-red-500">{error}</p>}
+            <Button className="w-full" color="primary" type="submit">
+              {loading ? "Logging in..." : "Log In"}
+            </Button>
+          </Form>
         </div>
       </div>
     </div>
