@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-NetTCPConnection -State Listen | Where-Object {$_LocalPort -in @\\(3001, 8000, 8080\\)} | Select-Object LocalAddress, LocalPort\")",
+      "Bash(powershell -Command \"Get-NetTCPConnection -State Listen | Where-Object { $_.LocalPort -in @\\(3001,8000,8080\\) } | Select-Object LocalAddress,LocalPort\")",
+      "Bash(powershell -Command \"Remove-Item ''c:\\\\Code\\\\Shipment Project\\\\frontend\\\\xeno-shipment\\\\src\\\\pages\\\\login\\\\components\\\\MicrosoftLogin.tsx''; Remove-Item ''c:\\\\Code\\\\Shipment Project\\\\frontend\\\\xeno-shipment\\\\src\\\\config\\\\msalConfig.ts''\")",
+      "Bash(npm uninstall:*)",
+      "Bash(powershell -Command \"cd ''c:\\\\Code\\\\Shipment Project\\\\frontend\\\\xeno-shipment''; npm uninstall @azure/msal-browser\")",
+      "Bash(del \"c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\LoginController.php\")",
+      "Bash(del \"c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\MicrosoftAuthController.php\")",
+      "Bash(del \"c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\Logistic\\\\FrontEndLoginController.php\")",
+      "Bash(powershell -Command \"Remove-Item ''c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\LoginController.php'', ''c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\MicrosoftAuthController.php'', ''c:\\\\Code\\\\Shipment Project\\\\backend\\\\xen-erp-backend\\\\app\\\\Http\\\\Controllers\\\\Logistic\\\\FrontEndLoginController.php''\")"
+    ]
+  }
+}

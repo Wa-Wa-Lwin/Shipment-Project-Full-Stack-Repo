@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find '/c/Code/Shipment Project/backend/xen-erp-backend/app/Models' -type f -name *.php)",
+      "Bash(php artisan:*)",
+      "Bash(php -m)",
+      "Bash(php --ini)",
+      "Bash(powershell -Command \"Select-String -Path ''C:\\\\php\\\\php.ini'' -Pattern ''pdo_sqlite|sqlite3'' | Select-Object -First 5\")",
+      "Bash(powershell -Command \"\\(Get-Content ''C:\\\\php\\\\php.ini''\\) -replace ''^;extension=pdo_sqlite'', ''extension=pdo_sqlite'' -replace ''^;extension=sqlite3'', ''extension=sqlite3'' | Set-Content ''C:\\\\php\\\\php.ini''\")"
+    ]
+  }
+}

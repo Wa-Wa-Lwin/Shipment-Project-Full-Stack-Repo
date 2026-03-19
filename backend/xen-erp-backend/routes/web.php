@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Api\ExchangeRateController;
-use App\Http\Controllers\MicrosoftAuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,8 +18,6 @@ Route::prefix('api/exchange-rates')->group(function () {
     Route::get('/convert', [ExchangeRateController::class, 'convert']);
     Route::post('/refresh', [ExchangeRateController::class, 'refresh']);
 });
-
-Route::post('/api/logistics/login/microsoft', [MicrosoftAuthController::class, 'login']);
 
 // Serve uploaded invoice files
 Route::get('/uploads/invoices/{filename}', function ($filename) {

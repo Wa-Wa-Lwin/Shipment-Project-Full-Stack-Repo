@@ -1,10 +1,7 @@
 <?php
 
-use App\Http\Controllers\Logistic\FrontEndLoginController;
 use App\Http\Controllers\Logistic\UserListController;
 use Illuminate\Support\Facades\Route;
-
-Route::post('/get_user_data_with_email', [FrontEndLoginController::class, 'getUserDataWithLoginEmail']);
 
 // User List Management Routes
 Route::get('/get_all_user_data', [UserListController::class, 'getAllUsersWithRelations']);

@@ -181,20 +181,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = (userData: MSLoginUser) => {
     localStorage.setItem('msLoginUser', JSON.stringify(userData));
     setMSLoginUser(userData);
-    
-    // Allow @xenoptics.com users to login even without DB data
-    if (userData.email.endsWith('@xenoptics.com')) {
-      fetchUserData(userData.email).catch(err => {
-        console.error('Error fetching user data after login:', err);
-        // Don't logout @xenoptics.com users if DB fetch fails
-        setHasDbData(false);
-      });
-    } else {
-      fetchUserData(userData.email).catch(err => {
-        console.error('Error fetching user data after login:', err);
-        logout();
-      });
-    }
+    setHasDbData(false);
   };
 
   const logout = () => {
